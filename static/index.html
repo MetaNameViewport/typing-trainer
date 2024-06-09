@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Typing trainer</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+
+    <script src="/static/schemes.js" defer></script>
+    <script src="/static/main.js" defer></script>
+</head>
+<body>
+    <section class="text-wrapper" id="text-wrapper">
+        <div class="text" id="text"></div>
+
+        <div class="start-overlay" id="start-overlay">
+            <h1>Press "SPACE" to start!</h1>
+        </div>
+    </section>
+
+    <div class="end-overlay" id="end-overlay">
+        <div class="end-stats" id="end-stats">
+            <h2>Your time is: <span id="time"></span></h2>
+        </div>
+
+        <div class="close-cross" id="close-cross">
+            <!--
+            <div style="transform: rotate(45deg);"></div>
+            <div style="transform: rotate(-45deg);"></div>
+            -->
+        </div>
+    </div>
+</body>
+</html>
