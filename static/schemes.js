@@ -24,11 +24,15 @@ class classScheme {
     }
 }
 
-const textSection = document.getElementById('text');
+const nav = new styleScheme(document.getElementById('nav'),
+[
+    {'opacity': '0'},
+    {'opacity': '1'}
+])
 
 const textWrapper = new styleScheme(document.getElementById('text-wrapper'),
 [
-    {'transform': 'scale(1)'},
+    {'transform': 'scale(1) translateY(-8%)'},
     {'transform': 'scale(0.93)'},   
 ])
 
@@ -59,4 +63,14 @@ const letterClassNames = new classScheme(null, [
     'letter-cursor-af',
     'letter-cursor-bf',
     ''
+])
+
+const navElementsStyles = new styleScheme(null, [
+    {'transform': 'scale(1)'},
+    {'transform': 'scale(1.2)'}
+])
+
+const navElementsClasses = new classScheme(null, [
+    '',
+    'nav-el-active'
 ])

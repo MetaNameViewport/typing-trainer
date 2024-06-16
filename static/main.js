@@ -1,3 +1,4 @@
+const textSection = document.getElementById('text');
 const timeResult = document.getElementById('time')
 const closeCross = document.getElementById('close-cross')
 
@@ -8,11 +9,16 @@ let letters = []
 
 let state = 0
 
+let currNumOfWords = 10
+let prevElement = nav.element.children[0]
+
+navElementsStyles.setStyle(1, prevElement)
+
 let startTime
 
-init()
+init(currNumOfWords)
 
-function init() {
+function init(numOfWords) {
     endOverlay.setStyle(0)
     endStats.setStyle(0)
 
@@ -25,7 +31,7 @@ function init() {
 
     letters = []
 
-    fetch('http://127.0.0.1:5500/api/text?length=3')
+    fetch(`http://127.0.0.1:5500/api/text?length=${numOfWords}`)
     .then(response => response.text())
     .then(function(data) {
         text = data;
@@ -53,6 +59,7 @@ function generalKeyHandler(event) {
         if (event.key == ' ') {
             startOverlay.setStyle(0)
             textWrapper.setStyle(0)
+            nav.setStyle(0)
 
             startTime = Date.now()
 
@@ -70,6 +77,8 @@ function generalKeyHandler(event) {
             textWrapper.setStyle(1)
             endOverlay.setStyle(1)
             endStats.setStyle(1)
+
+            nav.setStyle(1)
             
             let deltaTime = Date.now() - startTime;
 
@@ -104,7 +113,24 @@ document.addEventListener('keypress', generalKeyHandler);
 
 endOverlay.element.addEventListener('click', function(event) {
     if (event.target == endOverlay.element || event.target == closeCross) {
-        init()
+        init(currNumOfWords)
         state = 0
     }
 })
+
+nav.element.addEventListener('click', function(event) {
+    let target = event.target
+    let id = target.id
+
+    if (id != 'nav') {
+        currNumOfWords = id
+        
+        navElementsStyles.setStyle(0, prevElement)
+        navElementsStyles.setStyle(1, target)
+
+        prevElement = target
+
+        init(currNumOfWords);
+    }
+})
+

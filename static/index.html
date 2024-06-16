@@ -18,25 +18,30 @@
     <script src="/static/main.js" defer></script>
 </head>
 <body>
-    <section class="text-wrapper" id="text-wrapper">
-        <div class="text" id="text"></div>
-
-        <div class="start-overlay" id="start-overlay">
-            <h1>Press "SPACE" to start!</h1>
-        </div>
-    </section>
+    <main>
+        <nav id="nav">
+            <a type="button" id="10">10</a>
+            <a type="button" id="25">25</a>
+            <a type="button" id="50">50</a>
+            <a type="button" id="100">100</a>
+            <a type="button" id="150">150</a>
+        </nav>
+        
+        <section class="text-wrapper" id="text-wrapper">
+            <div class="text" id="text"></div>
+    
+            <div class="start-overlay" id="start-overlay">
+                <h1>Press "SPACE" to start!</h1>
+            </div>
+        </section>
+    </main>
 
     <div class="end-overlay" id="end-overlay">
         <div class="end-stats" id="end-stats">
             <h2>Your time is: <span id="time"></span></h2>
         </div>
 
-        <div class="close-cross" id="close-cross">
-            <!--
-            <div style="transform: rotate(45deg);"></div>
-            <div style="transform: rotate(-45deg);"></div>
-            -->
-        </div>
+        <div class="close-cross" id="close-cross"></div>
     </div>
 </body>
 </html>
