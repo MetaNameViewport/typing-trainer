@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Typing trainer</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/mobile/style.css">
+    <link rel="stylesheet" href="/static/mobile/kb.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    
+    <script src="/static/mobile/schemes.js" defer></script>
+    <script src="/static/mobile/main.js" defer></script>
+</head>
+<body>
+    <main>
+        <nav id="nav">
+            <a type="button" id="10">10</a>
+            <a type="button" id="25">25</a>
+            <a type="button" id="50">50</a>
+            <a type="button" id="100">100</a>
+            <a type="button" id="150">150</a>
+        </nav>
+        
+        <section class="text-wrapper" id="text-wrapper">
+            <div class="text" id="text"></div>
+    
+            <div class="start-overlay" id="start-overlay">
+                <h1>Press "SPACE" to start!</h1>
+            </div>
+        </section>
+    </main>
+
+    <section class="keyboard" id="keyboard">
+        <div class="row" id="r1">
+            <div data-value="q">q</div>
+            <div data-value="w">w</div>
+            <div data-value="e">e</div>
+            <div data-value="r">r</div>
+            <div data-value="t">t</div>
+            <div data-value="y">y</div>
+            <div data-value="u">u</div>
+            <div data-value="i">i</div>
+            <div data-value="o">o</div>
+            <div data-value="p">p</div>
+        </div>
+
+        <div class="row" id="r2">
+            <div data-value="a">a</div>
+            <div data-value="s">s</div>
+            <div data-value="d">d</div>
+            <div data-value="f">f</div>
+            <div data-value="g">g</div>
+            <div data-value="h">h</div>
+            <div data-value="j">j</div>
+            <div data-value="k">k</div>
+            <div data-value="l">l</div>
+        </div>
+
+        <div class="row" id="r3">
+            <div data-value="z">z</div>
+            <div data-value="x">x</div>
+            <div data-value="c">c</div>
+            <div data-value="v">v</div>
+            <div data-value="b">b</div>
+            <div data-value="n">n</div>
+            <div data-value="m">m</div>
+        </div>
+
+        <div class="row" id="r4">
+            <div data-value=" ">space</div>
+        </div>
+    </section>
+
+    <div class="end-overlay" id="end-overlay">
+        <div class="end-stats" id="end-stats">
+            <ul class="stats-field" id="stats-field"></ul>
+        </div>
+
+        <div class="close-cross" id="close-cross"></div>
+    </div>
+</body>
+</html>

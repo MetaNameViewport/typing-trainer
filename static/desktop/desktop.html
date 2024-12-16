@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Typing trainer</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/desktop/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+
+    <script src="/static/desktop/schemes.js" defer></script>
+    <script src="/static/desktop/main.js" defer></script>
+</head>
+<body>
+    <main>
+        <nav id="nav">
+            <a type="button" id="10">10</a>
+            <a type="button" id="25">25</a>
+            <a type="button" id="50">50</a>
+            <a type="button" id="100">100</a>
+            <a type="button" id="150">150</a>
+        </nav>
+        
+        <section class="text-wrapper" id="text-wrapper">
+            <div class="text" id="text"></div>
+    
+            <div class="start-overlay" id="start-overlay">
+                <h1>Press "SPACE" to start!</h1>
+            </div>
+        </section>
+    </main>
+
+    <div class="end-overlay" id="end-overlay">
+        <div class="end-stats" id="end-stats">
+            <ul class="stats-field" id="stats-field"></ul>
+        </div>
+
+        <div class="close-cross" id="close-cross"></div>
+    </div>
+</body>
+</html>
